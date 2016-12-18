@@ -1,5 +1,6 @@
 #include "freepc.h"
 #include "assets.h"
+#include "timetable.h"
 
 int mainPage(struct http_request *req)
 {
@@ -52,6 +53,7 @@ int registerComp(struct http_request *req) {
 
 void alloc(void) {
 	printf("---------Init----------\n");
+	periodFromDate();
 	atexit(&dealloc);
 	roomTracker = -1;
 	currentID = 0;

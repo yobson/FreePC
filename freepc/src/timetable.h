@@ -1,0 +1,1 @@
+int periodFromDate(void);
