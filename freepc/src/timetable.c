@@ -1,8 +1,12 @@
 #include "timetable.h"
-#include <time.h>
 
-int periodFromDate() {
-    time_t currentTime = time(0);
-    printf(ctime(&currentTime));
-    return 0;
+int getLessonIndex() {
+    time_t rawtime;
+    struct tm *tminfo;
+    int index = 0;
+    time (&rawtime);
+    tminfo = localtime (&rawtime);
+    index += (currentWeek - 1) * 25;
+
+    return index;
 }

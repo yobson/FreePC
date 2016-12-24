@@ -14,6 +14,18 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+*.o
+freepc/flavor
+
+freepc/.objs
+
+freepc/freepc.so
+
+freepc/assets.h
+
+freepc/cert
+
+
 # Windows shortcuts
 *.lnk
 

@@ -5,3 +5,4 @@ int registerComp(struct http_request *);
 void alloc(void);
 void dealloc(void);
 
+void buildStudyArea(void);
