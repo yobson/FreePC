@@ -9,7 +9,7 @@ int getLessonIndex() {
     if (currentWeek > 2 ||
         tminfo->tm_wday > 5 ||
         tminfo->tm_hour > 15 ||
-        (tminfo->tm_hour < 8 && tminfo->tm_min < 30) {
+        (tminfo->tm_hour < 8 && tminfo->tm_min < 30)) {
             return 50;
     }
     index += (currentWeek - 1) * 25;
@@ -18,6 +18,6 @@ int getLessonIndex() {
     if (tminfo->tm_hour > 11 && tminfo->tm_min > 10) { index++; }
     if (tminfo->tm_hour > 12 && tminfo->tm_min > 10) { index++; }
     if (tminfo->tm_hour > 14) { index++; }
-    
+
     return index;
 }
