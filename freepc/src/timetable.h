@@ -1,1 +1,5 @@
-int periodFromDate(void);
+#include <time.h>
+
+int getLessonIndex(void);
+
+int currentWeek;
