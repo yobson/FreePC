@@ -1,6 +1,0 @@
-*.o
-.flavor
-.objs
-freepc.so
-assets.h
-cert
