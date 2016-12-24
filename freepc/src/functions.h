@@ -25,12 +25,17 @@ typedef struct {
     Computer computers[];
 } Room;
 
+typedef struct {
+    int numberOfFreeRooms;
+    int roomIndices[];
+} period;
+
 Room *rooms[12];
 
 int populateCompNode(char **, Computer);
 int buildRoomTable(char **, Room *);
-void addRoom(char id[2], int numberOfComputers);
+void addRoom(char [2], int);
 void fillComp(void);
 void addInitial(void);
 void addBelow(void);
-void addRight(int offset);
+void addRight(int);
