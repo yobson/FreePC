@@ -37,7 +37,7 @@ int registerComp(struct http_request *req) {
 		} else { 
 			i++;
 			if(i >= numberOfRooms) { 
-				http_response(req, 200, error, strlen(error));
+				http_response(req, 400, error, strlen(error));
 				return (KORE_RESULT_OK); 
 			}
 		}
@@ -53,27 +53,12 @@ int registerComp(struct http_request *req) {
 
 void alloc(void) {
 	printf("---------Init----------\n");
-	periodFromDate();
 	atexit(&dealloc);
 	roomTracker = -1;
 	currentID = 0;
 	numberOfRooms = 0;
 	
-	addRoom("SB", 14);
-	addInitial();
-	addBelow();
-	addBelow();
-	addBelow();
-	addBelow();
-	addBelow();
-	addBelow();
-	addBelow();
-	addBelow();
-	addBelow();
-	addBelow();
-	addBelow();
-	addRight(0);
-	addRight(0);
+	buildStudyArea();
 
 	CompNode = malloc(asset_len_node_html + 1);
 	IndexPage = malloc(asset_len_main_html + 1);
@@ -92,4 +77,22 @@ void dealloc(void) {
 	}
 	free(CompNode);
 	free(IndexPage);
+}
+
+void buildStudyArea(){
+	addRoom("SB", 14);
+	addInitial();
+	addBelow();
+	addBelow();
+	addBelow();
+	addBelow();
+	addBelow();
+	addBelow();
+	addBelow();
+	addBelow();
+	addBelow();
+	addBelow();
+	addBelow();
+	addRight(0);
+	addRight(0);
 }
