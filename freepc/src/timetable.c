@@ -3,6 +3,6 @@
 
 int periodFromDate() {
     time_t currentTime = time(0);
-    printf(ctime(&currentTime));
+    printf(time_t);
     return 0;
 }
