@@ -1,5 +1,11 @@
 #include "timetable.h"
 
+<<<<<<< HEAD
+int periodFromDate() {
+    time_t currentTime = time(0);
+    printf(time_t);
+    return 0;
+=======
 int getLessonIndex() {
     time_t rawtime;
     struct tm *tminfo;
@@ -20,4 +26,5 @@ int getLessonIndex() {
     if (tminfo->tm_hour > 14) { index++; }
 
     return index;
+>>>>>>> 86ccf63fa82b89bc3d7af4dae29c65a20eed8199
 }
